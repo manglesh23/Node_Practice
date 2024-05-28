@@ -39,8 +39,38 @@ display(mulit);
 
 // sum(7,1);
 
+// (function(x){
+//     return (function(y){
+//         console.log(x)
+//     })(2);
+// })(1)
+
 let numbers=[1,2,3,4,5,6];
 let multiply=numbers.map(item=>item*2);
-console.log( multiply)
+console.log( multiply);
+
+
+function outerfunction(){
+    let outer="outer hu";
+    function innner(){
+        let inside="inner hu";
+        console.log("Outer value:-",outer)
+    }
+    innner();
+    // console.log(inside);
+    
+           // function declaared inside a function can be access by the outer function
+                                 //outer function's variable can be accessed by inner as well
+                                 //inner function variables function can't be accessed by out
+    }
+
+outerfunction();
+
+
+for(let i =0;i<10;i++){
+    setTimeout(()=>{
+        console.log(i);
+    },i*1000);
+}
 
 module.exports={home};
