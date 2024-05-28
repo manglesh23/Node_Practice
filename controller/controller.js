@@ -67,10 +67,36 @@ function outerfunction(){
 outerfunction();
 
 
-for(let i =0;i<10;i++){
+for(let i =0;i<3;i++){
     setTimeout(()=>{
         console.log(i);
     },i*1000);
 }
 
+function scope(){
+    var  x=23;
+    console.log(x);
+   var x="string";
+    console.log(x);
+}
+
+scope();
+
+let z=10;
+function value(){
+    console.log("value of z:-",z);
+    var z=90;
+    
+}
+value();
+
+function greeting(...value){
+    console.log(value[1])
+    console.log(`hello ${value[0]}`)
+}
+function callbackfunction(callback){
+    let name="manglesh";
+    callback(name,7)
+}
+callbackfunction(greeting);
 module.exports={home};
