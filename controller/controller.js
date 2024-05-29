@@ -92,11 +92,36 @@ value();
 
 function greeting(...value){
     console.log(value[1])
-    console.log(`hello ${value[0]}`)
+    // console.log(`hello ${value[0]} * ${value[1]}`)
+    console.log(value[0]*value[1])
 }
 function callbackfunction(callback){
     let name="manglesh";
-    callback(name,7)
+    callback(9,7)
 }
-callbackfunction(greeting);
+callbackfunction(greeting);      // Callback function, Function passed into another function as an argument 
+
+let arr=[1,1,2,2,12,4,3,5,2,6,3,4];
+let unique=[...new Set(arr)];
+console.log(unique);
+
+function fun(){
+    console.log(arguments);
+}
+// const fun=()=>{
+//     console.log(arguments)
+// }
+fun(1,2,3,4,5);
+
+function makefun(){
+
+    function display(num){
+        console.log("display function inside makefun",num);
+
+    }
+    console.log("Pringting",display());
+    return display;
+}
+makefun()(5);
+// console.log("calling:-",makefun())
 module.exports={home};
