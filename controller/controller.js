@@ -67,7 +67,7 @@ function outerfunction(){
 outerfunction();
 
 
-for(let i =0;i<3;i++){
+for(let i =0;i<3;i++){   // Set Time out, Using let keyword, 
     setTimeout(()=>{
         console.log(i);
     },i*1000);
