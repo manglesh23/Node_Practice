@@ -11,22 +11,60 @@ console.log(str.replaceAll("a","z"));
 console.log(str.concat(" ","shaktiman"))  ;
 
 let anagramstring="Hello World With You";
-let anotherstring="World Hello You With";
+let anotherstring="world hello you with";
 
 function checkanagram(str1,str2){
     console.log(str1,str2);
+    str1=str1.toLowerCase();
+    str2=str2.toLowerCase();
     if(str1.length!=str2.length)
         return false
 
-    str1=str1.split(" ");
+    str1=str1.split(" ").sort();
+    str2=str2.split(" ").sort();
     console.log(str1);
 
-    for(let v of str1){
-        console.log(v)
-        if(!str2.includes(v));
-        return false
+    // for(let v of str1){
+    //     console.log(v)
+    //     if(!str2.includes(v));
+    //     return false
+    // }
+    for(let i=0;i<str1.length;i++){
+        if(str1[i]!=str2[i]){
+            return false
+        }
     }
     return true
 }
 
 console.log("Check Anagram:-",checkanagram(anagramstring,anotherstring));
+
+let a1=[1,2,3,4,6];
+let a2=a1;
+console.log("a2 :-",a2);
+
+let today=new Date();
+let sevendays=new Date(today);
+sevendays=sevendays.setDate(today.getDate()-7);
+console.log(today,sevendays);
+
+const currentdate = new Date();
+const currentDateIndex = currentdate.getDate();
+console.log("today:-", currentdate);
+
+let sevenDaysBefore = new Date(currentdate);
+sevenDaysBefore.setDate(currentDateIndex - 7);
+
+console.log('Seven Days Before:', sevenDaysBefore);
+
+
+const moment=require('moment'); // moment liberary
+let getDate=moment().format('YYYY-MM-DD');
+console.log(getDate)
+
+let datemodi=moment(getDate,'YYYY-MM-DD').toDate();
+console.log("data modi:-",datemodi);
+
+let daysbefore=moment().subtract(7,'days');
+daysbefore=daysbefore.format('YYYY-MM-DD');
+console.log(daysbefore)
