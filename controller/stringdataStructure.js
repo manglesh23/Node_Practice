@@ -67,4 +67,32 @@ console.log("data modi:-",datemodi);
 
 let daysbefore=moment().subtract(7,'days');
 daysbefore=daysbefore.format('YYYY-MM-DD');
-console.log(daysbefore)
+console.log(daysbefore);
+
+let name="manglesh ";
+console.log(name.charCodeAt(1));
+console.log(String.fromCharCode(65));
+
+let string1="hello to the world";
+let string2="hello the too world";
+
+function check(string1,string2){
+    if(string1.length!=string2.length)
+        return false
+string2 =string2.split(" ");
+console.log(string2)
+for(let v of string2){
+ if(!string1.includes(v))
+    return false
+}
+return true
+}
+
+
+console.log("check annagra:-",check(string1,string2));
+
+let joinstring="hey there!";
+let jointhis="no";
+let arr=["hey there","no"];
+let b=arr.join(" ");
+console.log(b);
