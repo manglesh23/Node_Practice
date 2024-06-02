@@ -74,7 +74,7 @@ console.log(name.charCodeAt(1));
 console.log(String.fromCharCode(65));
 
 let string1="hello to the world";
-let string2="hello the too world";
+let string2="hello the he world";
 
 function check(string1,string2){
     if(string1.length!=string2.length)
@@ -96,3 +96,54 @@ let jointhis="no";
 let arr=["hey there","no"];
 let b=arr.join(" ");
 console.log(b);
+
+function pailandromeNumber(num){
+    if(num<0){
+        return false
+    }
+    let num1=num;
+    num1=String(num1);
+    console.log(num1)
+    num1=num1.split('').reverse().join('');
+    num=String(num);
+    if(num1===(num)){
+        console.log("painlodrom");
+        return
+    }
+    console.log("not");
+}
+
+pailandromeNumber(102);
+
+//hamming distance
+
+function hammingDistance(str1,str2){
+    if(str1.length!=str2.length)
+        return false;
+ let distance=0;
+    for(let i=0;i<str1.length;i++){
+        if(str1[i]!=str2[i])
+            distance++;
+    }
+    return distance;
+}
+console.log("Distance:-",hammingDistance("manglesh","manglehs"));
+
+function countcharocc(str){
+    let map=new Map();
+    for(let i =0;i<str.length;i++){
+        if(map.has(str[i])){
+           map.set(str[i],map.get(str[i])+1)
+        }else{
+            map.set(str[i],1);
+        }
+    }
+    return map
+}
+console.log("char occ:-",countcharocc("mangleshhsm"));
+
+const maxelement=(arr)=>{
+    arr=arr.sort();
+    console.log(arr[arr.length-1]);
+}
+maxelement([2,5,1,8,6,90,8]);
