@@ -1,7 +1,7 @@
 const home=async(req,res)=>{
     try{
         console.log("consoel me print");
-     res.status(200).json({message:"Home page form controller got it now"});
+     res.status(200).json({message:"Home page form controller got it Connet to myusql"});
     }catch(e){
         return{
             error:true,
