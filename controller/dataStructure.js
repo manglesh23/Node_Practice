@@ -146,3 +146,4 @@ console.log("Max Profit:-",maxprofit([7,1,1,1,1,5]));
 
 
 module.exports={dataStructure}
+

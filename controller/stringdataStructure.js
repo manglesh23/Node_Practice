@@ -147,3 +147,17 @@ const maxelement=(arr)=>{
     console.log(arr[arr.length-1]);
 }
 maxelement([2,5,1,8,6,90,8]);
+
+function countInArray(arr){
+    let obj={};
+    for(let v of arr){
+      if(obj[v]){
+        obj[v]=obj[v]+1
+      }else{
+        obj[v]=1
+      }
+    }
+    console.log("Object:-",obj);
+ }
+
+ countInArray([1,2,1,3,2,4,5,2,7,9,9]);
